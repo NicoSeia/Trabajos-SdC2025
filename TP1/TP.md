@@ -1,4 +1,13 @@
-# Trabajo Practico 1
+
+<div style="text-align: center;">
+
+# Trabajo Práctico N°1 # 
+</div>
+
+# Parte 1: Creación de Benchmarks #
+
+
+
 
 ## Introducción
 Para evaluar el rendimiento del hardware en función de las tareas diarias, podemos usar benchmarks específicos que reflejen la carga de trabajo real. A continuación, se presenta una tabla que asocia cada tarea con el benchmark más representativo.
@@ -63,3 +72,39 @@ Sin embargo, en tareas altamente paralelas como la compilación del kernel, los 
 - **AMD Ryzen 9 7950X**: Es el más caro de los tres, pero también ofrece el mejor rendimiento en tareas altamente paralelas. Su eficiencia en términos de costo dependerá de la frecuencia y magnitud de las tareas de compilación que realices.  
 
 ---
+
+
+
+<div style="text-align: center;">
+
+# Parte 2: Evaluación de performance de un microcontrolador # 
+</div>
+
+Se creó un código en C (ver archivo `main.c`) para hacer parpadear el LED integrado P13 de una placa STM32F103CT86 (también conocida como Bluepill), con la ayuda de un for loop simple. Dicho código se cargó en la placa con el uso de los programa STMCubeIDE y STMCubeProgrammer. 
+
+En primera instancia, se usó el código mencionado con una velocidad de clock de 8MHz (velocidad por defecto) y, posteriormente, se duplicó la frecuencia de funcionamiento a 16MHz. En ambas instancias, se midieron y calcularon ciertos parámetros para medir la performance del código.Los parámetros calculados fueron los siguientes:
+
+
+**-Tiempo de ejecución (ET)**
+
+**-Rendimiento:** Se define como la capacidad que tiene dicho un sistema para realizar un trabajo en un determinado tiempo. Es inversamente proporcional al tiempo:
+<div style="text-align: center;">
+
+### $\frac{1}{ET}$ ###
+</div>
+
+**-Speedup:** Cociente entre el rendimiento de un sistema mejorado y el rendimiento de su implementación original
+
+**-Eficiencia:** mide la utilización de un conjunto de recursos. Sea $ Speedup_N $ la ganacia obtenida por mejorar el sistema con N recursos, entonces la eficiencia se calcula como:
+
+<div style="text-align: center;">
+
+### $\frac{Speedup_{N}}{N}$ ###
+</div>
+
+
+
+Con estos parámetros en mente, en la siguiente tabla (ver `performance_segun_frecuencia_clock.ods` para ver el archivo completo) se muestran los resultados obtenidos 
+
+![alt text](<Screenshot from 2025-03-28 12-28-58.png>)
+
